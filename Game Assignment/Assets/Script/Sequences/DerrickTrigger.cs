@@ -8,11 +8,14 @@ public class DerrickTrigger : MonoBehaviour
 {
     public float TheDistance;
     public GameObject ThePlayer;
-    public GameObject TextBox;
+    public GameObject TheBox;
+    public GameObject DerrickDialog;
     public AudioSource Audio3;
     public GameObject ActionDisplay;
     public GameObject DerrickText;
     public GameObject ExtraCross;
+    public GameObject DarrickAnimation;
+    public GameObject TheMarker;
 
     void Update()
     {
@@ -31,6 +34,8 @@ public class DerrickTrigger : MonoBehaviour
         {
             if (TheDistance <= 2)
             {
+                this.GetComponent<BoxCollider>().enabled = false;
+                TheBox.GetComponent<BoxCollider>().enabled = false;
                 ActionDisplay.SetActive(false);
                 DerrickText.SetActive(false);
                 ThePlayer.GetComponent<FirstPersonController>().enabled = false;
@@ -39,11 +44,23 @@ public class DerrickTrigger : MonoBehaviour
         }
     }
     IEnumerator ScenePlayer() {
-        TextBox.GetComponent<Text>().text = "Look Like A Weapon On The Table";
-        Audio3.Play();
+        DarrickAnimation.GetComponent<Animator>().Play("Talking");
+        yield return new WaitForSeconds(0.2f);
+        DerrickDialog.SetActive(true);
+        //Audio3.Play();
+        yield return new WaitForSeconds(1);
+        DerrickDialog.SetActive(false);
         yield return new WaitForSeconds(1.5f);
-        TextBox.GetComponent<Text>().text = "";
+        DerrickDialog.GetComponent<Text>().text = "";
         ThePlayer.GetComponent<FirstPersonController>().enabled = true;
+        this.GetComponent<BoxCollider>().enabled = true;
+        TheMarker.SetActive(true);
+    }
+    void OnMouseExit()
+    {
+        ExtraCross.SetActive(false);
+        DerrickText.SetActive(false);
+        ActionDisplay.SetActive(false);
     }
 }
 

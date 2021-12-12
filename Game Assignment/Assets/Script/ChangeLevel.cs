@@ -20,7 +20,7 @@ public class ChangeLevel : MonoBehaviour
 
 	void OnMouseOver()
 	{
-		if (TheDistance <= 2)
+		if (TheDistance <= 3)
 		{
 			ExtraCross.SetActive(false);
 			ActionDisplay.SetActive(true);
@@ -28,7 +28,7 @@ public class ChangeLevel : MonoBehaviour
 		}
 		if (Input.GetButtonDown("Action"))
 		{
-			if (TheDistance <= 2)
+			if (TheDistance <= 3)
 			{
 				ActionDisplay.SetActive(false);
 				ActionText.SetActive(false);
@@ -43,5 +43,11 @@ public class ChangeLevel : MonoBehaviour
         LoadText.SetActive(true);
         SceneManager.LoadScene(2);
 		yield return new WaitForSeconds(2.95f);
+	}
+
+	void OnMouseExit()
+	{
+		ActionDisplay.SetActive(false);
+		ActionText.SetActive(false);
 	}
 }
