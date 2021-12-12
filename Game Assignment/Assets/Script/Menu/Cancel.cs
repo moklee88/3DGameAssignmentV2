@@ -19,7 +19,7 @@ public class Cancel : MonoBehaviour
         ButtonClick.Play();
         yield return new WaitForSeconds(2.95f);
         LoadText.SetActive(true);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(0);
 
     }
 }

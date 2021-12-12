@@ -31,7 +31,7 @@ public class MainMenuFunction : MonoBehaviour
         ButtonClick.Play();
         yield return new WaitForSeconds(2.95f);
         LoadText.SetActive(true);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(2);
     }
     IEnumerator Credit()
     {
@@ -39,6 +39,6 @@ public class MainMenuFunction : MonoBehaviour
         ButtonClick.Play();
         yield return new WaitForSeconds(2.95f);
         LoadText.SetActive(true);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(1);
     }
 }

@@ -41,7 +41,7 @@ public class ChangeLevel : MonoBehaviour
         FadeOut.SetActive(true);
         yield return new WaitForSeconds(2.95f);
         LoadText.SetActive(true);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
 		yield return new WaitForSeconds(2.95f);
 	}
 

@@ -43,7 +43,7 @@ public class IntroSequenceScene : MonoBehaviour
         Allblack.SetActive(true);
         yield return new WaitForSeconds(5);
         LoadText.SetActive(true);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
         //MainCamera.SetActive(false);
 
     }
