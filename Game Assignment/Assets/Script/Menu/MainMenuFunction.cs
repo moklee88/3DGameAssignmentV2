@@ -22,6 +22,7 @@ public class MainMenuFunction : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+        Debug.Log("Quit");
     }
 
     IEnumerator NewGameStart()
@@ -30,7 +31,7 @@ public class MainMenuFunction : MonoBehaviour
         ButtonClick.Play();
         yield return new WaitForSeconds(2.95f);
         LoadText.SetActive(true);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(5);
     }
     IEnumerator Credit()
     {

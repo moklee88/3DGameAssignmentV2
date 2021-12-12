@@ -15,7 +15,6 @@ public class DerrickTrigger : MonoBehaviour
     public GameObject DerrickText;
     public GameObject ExtraCross;
     public GameObject DarrickAnimation;
-    public GameObject TheMarker;
 
     void Update()
     {
@@ -54,7 +53,6 @@ public class DerrickTrigger : MonoBehaviour
         DerrickDialog.GetComponent<Text>().text = "";
         ThePlayer.GetComponent<FirstPersonController>().enabled = true;
         this.GetComponent<BoxCollider>().enabled = true;
-        TheMarker.SetActive(true);
     }
     void OnMouseExit()
     {
