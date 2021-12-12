@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalBossStage.unity
     guid: 3d140ee0957d8454da4800991271e9f5
+  - enabled: 1
+    path: Assets/Scenes/LogoScreen.unity
+    guid: 3358c824f22ca49438e3f6b4066e9336
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0b1d1d83032ca4b4bba84eb87b9848eb
   m_configObjects: {}

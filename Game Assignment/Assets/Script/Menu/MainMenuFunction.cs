@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,13 +13,31 @@ public class MainMenuFunction : MonoBehaviour
     {
         StartCoroutine(NewGameStart()); 
     }
+
+    public void CreditButton()
+    {
+        StartCoroutine(Credit());
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     IEnumerator NewGameStart()
     { 
        FadeOut.SetActive(true);
         ButtonClick.Play();
         yield return new WaitForSeconds(2.95f);
         LoadText.SetActive(true);
-        SceneManager.LoadScene(4);
-
+        SceneManager.LoadScene(1);
+    }
+    IEnumerator Credit()
+    {
+        FadeOut.SetActive(true);
+        ButtonClick.Play();
+        yield return new WaitForSeconds(2.95f);
+        LoadText.SetActive(true);
+        SceneManager.LoadScene(3);
     }
 }
