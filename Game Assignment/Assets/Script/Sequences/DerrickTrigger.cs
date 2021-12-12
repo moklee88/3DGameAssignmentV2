@@ -11,7 +11,7 @@ public class DerrickTrigger : MonoBehaviour
     public GameObject TextBox;
     public AudioSource Audio3;
     public GameObject ActionDisplay;
-    public GameObject ActionText;
+    public GameObject DerrickText;
     public GameObject ExtraCross;
 
     void Update()
@@ -25,14 +25,14 @@ public class DerrickTrigger : MonoBehaviour
         {
             ExtraCross.SetActive(true);
             ActionDisplay.SetActive(true);
-            ActionText.SetActive(true);
+            DerrickText.SetActive(true);
         }
         if (Input.GetButtonDown("Action"))
         {
             if (TheDistance <= 2)
             {
                 ActionDisplay.SetActive(false);
-                ActionText.SetActive(false);
+                DerrickText.SetActive(false);
                 ThePlayer.GetComponent<FirstPersonController>().enabled = false;
                 StartCoroutine(ScenePlayer());
             }
